@@ -1,0 +1,7578 @@
+Model {
+  Name			  "IKs"
+  Version		  6.4
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.53"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Sep 03 16:39:19 2007"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Stefano Severi"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Jun 10 15:09:29 2009"
+  ModelVersionFormat	  "1.%<AutoIncrement:53>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.2.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.2.0"
+	  StartTime		  "0.0"
+	  StopTime		  "sim_time"
+	  AbsTol		  "1e-4"
+	  FixedStep		  "auto"
+	  InitialStep		  "1e-5"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "1e-3"
+	  MinStep		  "1e-7"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-4"
+	  SolverMode		  "Auto"
+	  Solver		  "ode15s"
+	  SolverName		  "ode15s"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.2.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "t"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.2.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  ParameterPooling	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.2.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskCondExecSysMsg "none"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StrictBusMsg		  "Warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.2.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.2.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.2.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.2.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		13
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.2.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeERTFirstTime     on
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      SimulationMode	      "normal"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+    }
+    Block {
+      BlockType		      From
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Fcn
+      Expr		      "sin(u[1])"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Goto
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      IgnoreLimit	      off
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      Step
+      Time		      "1"
+      Before		      "0"
+      After		      "1"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutDataTypeMode	      "Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      FixptAsFi		      off
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "IKs"
+    Location		    [392, 82, 1018, 670]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Fcn
+      Name		      "B2"
+      Position		      [220, 190, 260, 220]
+      ShowName		      off
+      Expr		      "u(1)*(pr==1)+u(2)*(pr==2)+u(3)*(pr==3)+u(4)*(pr"
+"==4)+u(5)*(pr==5)+u(6)*(pr==6)+u(7)*(pr==7)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      Position		      [305, 165, 335, 195]
+      ShowName		      off
+      Value		      "Ki"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant2"
+      Position		      [305, 95, 335, 125]
+      ShowName		      off
+      Value		      "Caio"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant3"
+      Position		      [305, 200, 335, 230]
+      ShowName		      off
+      Value		      "Nai"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant4"
+      Position		      [60, 405, 90, 435]
+      ShowName		      off
+      Value		      "Vcost"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Deactivation"
+      Ports		      [0, 1]
+      Position		      [55, 445, 95, 505]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"Deactivation"
+	Location		[68, 145, 318, 277]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.196850, 0.196850, 0.196850, 0.196850]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1]
+	  Position		  [105, 25, 125, 45]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace"
+	  Position		  [150, 71, 200, 89]
+	  VariableName		  "vm6"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "activation"
+	  Position		  [30, 20, 60, 50]
+	  Time			  "3000e-3"
+	  Before		  "-0.04"
+	  After			  ".02"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "activation1"
+	  Position		  [30, 75, 60, 105]
+	  Time			  "6000e-3"
+	  After			  ".02-x"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [155, 28, 185, 42]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "activation"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "activation1"
+	  SrcPort		  1
+	  Points		  [50, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Out1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "To Workspace"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "IKs"
+      Ports		      [4, 1]
+      Position		      [405, 94, 445, 231]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"IKs"
+	Location		[4, 82, 1016, 744]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Cai"
+	  Position		  [25, 63, 55, 77]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Vm"
+	  Position		  [30, 248, 60, 262]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Ki"
+	  Position		  [30, 303, 60, 317]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Nai"
+	  Position		  [30, 338, 60, 352]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  Position		  [155, 270, 185, 300]
+	  Value			  "EKs"
+	  VectorParams1D	  on
+	  SamplingMode		  "Sample based"
+	  OutDataTypeMode	  "Inherit from 'Constant value'"
+	  OutDataType		  "sfix(16)"
+	  ConRadixGroup		  "Use specified scaling"
+	  OutScaling		  "2^0"
+	  SampleTime		  "inf"
+	  FramePeriod		  "inf"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [125, 12, 195, 48]
+	  Value			  "GKsmax"
+	  VectorParams1D	  on
+	  SamplingMode		  "Sample based"
+	  OutDataTypeMode	  "Inherit from 'Constant value'"
+	  OutDataType		  "sfix(16)"
+	  ConRadixGroup		  "Use specified scaling"
+	  OutScaling		  "2^0"
+	  SampleTime		  "inf"
+	  FramePeriod		  "inf"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "EKs"
+	  Position		  [150, 320, 190, 340]
+	  Expr			  "(R*T/F)*(log((Ko+pNaK*Nao)/(u(1)+pNaK*u(2))"
+"))"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "GKs"
+	  Position		  [145, 55, 205, 85]
+	  Expr			  "216.5*(1+0.6/(1+(3.8e-5/u)^1.4))"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "IKs"
+	  Position		  [370, 185, 430, 215]
+	  Expr			  "u[1]*u[2]*(u[3]-u[4])"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Manual Switch"
+	  Ports			  [2, 1]
+	  Position		  [235, 287, 265, 323]
+	  SourceBlock		  "simulink/Signal\nRouting/Manual Switch"
+	  SourceType		  "Manual Switch"
+	  ShowPortLabels	  on
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  sw			  "1"
+	  action		  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Manual Switch2"
+	  Ports			  [2, 1]
+	  Position		  [245, 32, 275, 68]
+	  SourceBlock		  "simulink/Signal\nRouting/Manual Switch"
+	  SourceType		  "Manual Switch"
+	  ShowPortLabels	  on
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  sw			  "1"
+	  action		  "0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Markov model"
+	  Ports			  [1, 1]
+	  Position		  [150, 124, 190, 206]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Markov model"
+	    Location		    [0, 82, 995, 744]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Vm"
+	      Position		      [43, 165, 57, 195]
+	      Orientation	      "down"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add1"
+	      Ports		      [2, 1]
+	      Position		      [250, 647, 280, 678]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutScaling	      "2^-10"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C1"
+	      Ports		      [1, 1]
+	      Position		      [120, 60, 160, 120]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C1"
+		Location		[419, 177, 861, 379]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C2"
+		  Position		  [15, 78, 45, 92]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From"
+		  Position		  [15, 46, 55, 74]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [15, 116, 55, 144]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [120, 35, 180, 65]
+		  ShowName		  off
+		  Expr			  "4*u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [120, 80, 180, 110]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [290, 60, 320, 90]
+		  InitialCondition	  "C1o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [2, 1]
+		  Position		  [90, 31, 95, 69]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [90, 76, 95, 114]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [2, 1]
+		  Position		  [220, 29, 245, 116]
+		  ShowName		  off
+		  Inputs		  "-+"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C1"
+		  Position		  [360, 68, 390, 82]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [0, 0; 5, 0]
+		  Branch {
+		    DstBlock		    "C1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -65; -260, 0; 0, 30]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -25]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C2"
+		  SrcPort		  1
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C10"
+	      Ports		      [2, 1]
+	      Position		      [360, 358, 400, 422]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C10"
+		Location		[66, 96, 525, 405]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C7"
+		  Position		  [20, 143, 50, 157]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C11"
+		  Position		  [20, 218, 50, 232]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [20, 176, 60, 204]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 71, 60, 99]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 101, 60, 129]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 251, 60, 279]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 70, 230, 100]
+		  ShowName		  off
+		  Expr			  "u[1]*(2*u[2]+2*u[3])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [125, 145, 185, 175]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 220, 185, 250]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [330, 145, 360, 175]
+		  InitialCondition	  "C10o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [3, 1]
+		  Position		  [95, 37, 100, 133]
+		  ShowName		  off
+		  Inputs		  "3"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [95, 141, 100, 179]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 216, 100, 254]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [3, 1]
+		  Position		  [260, 49, 285, 271]
+		  ShowName		  off
+		  Inputs		  "-++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C10"
+		  Position		  [400, 153, 430, 167]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C11"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "C7"
+		  SrcPort		  1
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, 0]
+		  Branch {
+		    Points		    [0, -150; -300, 0; 0, 45]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "C10"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C11"
+	      Ports		      [4, 1]
+	      Position		      [470, 355, 510, 420]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C11"
+		Location		[36, 82, 498, 589]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C8"
+		  Position		  [20, 183, 50, 197]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C10"
+		  Position		  [20, 253, 50, 267]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C12"
+		  Position		  [20, 323, 50, 337]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C13"
+		  Position		  [20, 393, 50, 407]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From"
+		  Position		  [20, 51, 60, 79]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [20, 216, 60, 244]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 81, 60, 109]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 111, 60, 139]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From4"
+		  Position		  [20, 286, 60, 314]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 356, 60, 384]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From6"
+		  Position		  [20, 141, 60, 169]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From7"
+		  Position		  [20, 426, 60, 454]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 84, 260, 116]
+		  ShowName		  off
+		  Expr			  "u[1]*(u[2]+u[3]+u[4]+2*u[5])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [125, 185, 185, 215]
+		  ShowName		  off
+		  Expr			  "u[1]*2*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs2"
+		  Position		  [125, 255, 185, 285]
+		  ShowName		  off
+		  Expr			  "u[1]*2*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 325, 185, 355]
+		  ShowName		  off
+		  Expr			  "u[1]*2*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs4"
+		  Position		  [125, 395, 185, 425]
+		  ShowName		  off
+		  Expr			  "u[1]*3*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [340, 255, 370, 285]
+		  InitialCondition	  "C11o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [5, 1]
+		  Position		  [95, 19, 100, 171]
+		  ShowName		  off
+		  Inputs		  "5"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [95, 181, 100, 219]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux2"
+		  Ports			  [2, 1]
+		  Position		  [95, 251, 100, 289]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 321, 100, 359]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux4"
+		  Ports			  [2, 1]
+		  Position		  [95, 391, 100, 429]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [5, 1]
+		  Position		  [290, 59, 315, 481]
+		  ShowName		  off
+		  Inputs		  "-++++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C11"
+		  Position		  [420, 263, 450, 277]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "From7"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux4"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux4"
+		  SrcPort		  1
+		  DstBlock		  "GKs4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C13"
+		  SrcPort		  1
+		  DstBlock		  "Mux4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs4"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, 30]
+		  DstBlock		  "Sum3"
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "From6"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  Branch {
+		    DstBlock		    "C11"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -260; -310, 0]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, -15]
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  Points		  [5, 0]
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C8"
+		  SrcPort		  1
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "GKs2"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From4"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux2"
+		  SrcPort		  1
+		  DstBlock		  "GKs2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C10"
+		  SrcPort		  1
+		  DstBlock		  "Mux2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C12"
+		  SrcPort		  1
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, 15]
+		  DstBlock		  "Sum3"
+		  DstPort		  4
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C12"
+	      Ports		      [3, 1]
+	      Position		      [585, 353, 625, 417]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C12"
+		Location		[49, 113, 510, 470]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C9"
+		  Position		  [20, 148, 50, 162]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C11"
+		  Position		  [20, 218, 50, 232]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C14"
+		  Position		  [20, 288, 50, 302]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From"
+		  Position		  [20, 46, 60, 74]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [20, 181, 60, 209]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 76, 60, 104]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 106, 60, 134]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From4"
+		  Position		  [20, 251, 60, 279]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 321, 60, 349]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 70, 230, 100]
+		  ShowName		  off
+		  Expr			  "u[1]*(2*u[2]+2*u[3]+2*u[4])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [125, 150, 185, 180]
+		  ShowName		  off
+		  Expr			  "u[1]*3*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs2"
+		  Position		  [125, 220, 185, 250]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 290, 185, 320]
+		  ShowName		  off
+		  Expr			  "u[1]*3*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [330, 185, 360, 215]
+		  InitialCondition	  "C12o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [4, 1]
+		  Position		  [95, 30, 100, 135]
+		  ShowName		  off
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [95, 146, 100, 184]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux2"
+		  Ports			  [2, 1]
+		  Position		  [95, 216, 100, 254]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 286, 100, 324]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [4, 1]
+		  Position		  [260, 55, 285, 345]
+		  ShowName		  off
+		  Inputs		  "-+++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C12"
+		  Position		  [400, 193, 430, 207]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 10]
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C14"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "C11"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux2"
+		  SrcPort		  1
+		  DstBlock		  "GKs2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From4"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "GKs2"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 5]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "C9"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "From"
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [0, 0; 10, 0]
+		  Branch {
+		    Points		    [0, -190; -300, 0; 0, 35]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "C12"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C13"
+	      Ports		      [2, 1]
+	      Position		      [470, 493, 510, 557]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C13"
+		Location		[66, 96, 525, 405]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C11"
+		  Position		  [20, 143, 50, 157]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C14"
+		  Position		  [20, 218, 50, 232]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [20, 176, 60, 204]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 71, 60, 99]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 101, 60, 129]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 251, 60, 279]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 70, 230, 100]
+		  ShowName		  off
+		  Expr			  "u[1]*(u[2]+3*u[3])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [125, 145, 185, 175]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 220, 185, 250]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [330, 145, 360, 175]
+		  InitialCondition	  "C13o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [3, 1]
+		  Position		  [95, 37, 100, 133]
+		  ShowName		  off
+		  Inputs		  "3"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [95, 141, 100, 179]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 216, 100, 254]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [3, 1]
+		  Position		  [260, 49, 285, 271]
+		  ShowName		  off
+		  Inputs		  "-++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C13"
+		  Position		  [400, 153, 430, 167]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, 0]
+		  Branch {
+		    DstBlock		    "C13"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -150; -300, 0; 0, 45]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C11"
+		  SrcPort		  1
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C14"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C14"
+	      Ports		      [3, 1]
+	      Position		      [585, 493, 625, 557]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C14"
+		Location		[49, 113, 510, 470]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C12"
+		  Position		  [20, 148, 50, 162]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C13"
+		  Position		  [20, 218, 50, 232]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C15"
+		  Position		  [20, 288, 50, 302]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From"
+		  Position		  [20, 46, 60, 74]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [20, 181, 60, 209]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 76, 60, 104]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 106, 60, 134]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From4"
+		  Position		  [20, 251, 60, 279]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 321, 60, 349]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 70, 230, 100]
+		  ShowName		  off
+		  Expr			  "u[1]*(u[2]+u[3]+3*u[4])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [125, 150, 185, 180]
+		  ShowName		  off
+		  Expr			  "u[1]*2*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs2"
+		  Position		  [125, 220, 185, 250]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 290, 185, 320]
+		  ShowName		  off
+		  Expr			  "u[1]*4*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [330, 185, 360, 215]
+		  InitialCondition	  "C14o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [4, 1]
+		  Position		  [95, 30, 100, 135]
+		  ShowName		  off
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [95, 146, 100, 184]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux2"
+		  Ports			  [2, 1]
+		  Position		  [95, 216, 100, 254]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 286, 100, 324]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [4, 1]
+		  Position		  [260, 55, 285, 345]
+		  ShowName		  off
+		  Inputs		  "-+++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C14"
+		  Position		  [400, 193, 430, 207]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [0, 0; 10, 0]
+		  Branch {
+		    DstBlock		    "C14"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -190; -300, 0; 0, 35]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From"
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C12"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 5]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "GKs2"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From4"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux2"
+		  SrcPort		  1
+		  DstBlock		  "GKs2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C13"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C15"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 10]
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  4
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C15"
+	      Ports		      [2, 1]
+	      Position		      [585, 603, 625, 667]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C15"
+		Location		[66, 96, 525, 405]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C14"
+		  Position		  [20, 108, 50, 122]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "O1"
+		  Position		  [20, 183, 50, 197]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [20, 141, 60, 169]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 66, 60, 94]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 216, 60, 244]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "eta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 55, 230, 85]
+		  ShowName		  off
+		  Expr			  "u[1]*(4*u[2]+parexp(15))"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [125, 110, 185, 140]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 185, 185, 215]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [330, 110, 360, 140]
+		  InitialCondition	  "C15o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [2, 1]
+		  Position		  [95, 41, 100, 94]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [95, 106, 100, 144]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 181, 100, 219]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [3, 1]
+		  Position		  [260, 47, 285, 203]
+		  ShowName		  off
+		  Inputs		  "-++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C15"
+		  Position		  [400, 118, 430, 132]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  Points		  [30, 0; 0, -25]
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+		Line {
+		  Labels		  [0, 0]
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "O1"
+		  SrcPort		  1
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "C14"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  Branch {
+		    Points		    [0, -115; -300, 0; 0, 45]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 0]
+		    DstBlock		    "C15"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C2"
+	      Ports		      [3, 1]
+	      Position		      [240, 58, 280, 122]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C2"
+		Location		[462, 81, 923, 438]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C1"
+		  Position		  [20, 148, 50, 162]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C3"
+		  Position		  [20, 218, 50, 232]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C6"
+		  Position		  [20, 288, 50, 302]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From"
+		  Position		  [20, 46, 60, 74]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [20, 181, 60, 209]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 76, 60, 104]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 106, 60, 134]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From4"
+		  Position		  [20, 251, 60, 279]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 321, 60, 349]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 70, 230, 100]
+		  ShowName		  off
+		  Expr			  "u[1]*(3*u[2]+u[3]+u[4])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [125, 150, 185, 180]
+		  ShowName		  off
+		  Expr			  "u[1]*4*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs2"
+		  Position		  [125, 220, 185, 250]
+		  ShowName		  off
+		  Expr			  "u[1]*2*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 290, 185, 320]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [330, 185, 360, 215]
+		  InitialCondition	  "C2o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [4, 1]
+		  Position		  [95, 30, 100, 135]
+		  ShowName		  off
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [95, 146, 100, 184]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux2"
+		  Ports			  [2, 1]
+		  Position		  [95, 216, 100, 254]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 286, 100, 324]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [4, 1]
+		  Position		  [260, 55, 285, 345]
+		  ShowName		  off
+		  Inputs		  "-+++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C2"
+		  Position		  [400, 193, 430, 207]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [0, 0; 10, 0]
+		  Branch {
+		    DstBlock		    "C2"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -190; -300, 0; 0, 35]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From"
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C1"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 5]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "GKs2"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From4"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux2"
+		  SrcPort		  1
+		  DstBlock		  "GKs2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C6"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 10]
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  4
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C3"
+	      Ports		      [3, 1]
+	      Position		      [360, 58, 400, 122]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C3"
+		Location		[107, 85, 568, 442]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C2"
+		  Position		  [20, 148, 50, 162]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C4"
+		  Position		  [20, 218, 50, 232]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C7"
+		  Position		  [20, 288, 50, 302]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From"
+		  Position		  [20, 46, 60, 74]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [20, 181, 60, 209]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 76, 60, 104]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 106, 60, 134]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From4"
+		  Position		  [20, 251, 60, 279]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 321, 60, 349]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [120, 67, 255, 103]
+		  ShowName		  off
+		  Expr			  "u[1]*(2*u[2]+2*u[3]+2*u[4])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [125, 150, 185, 180]
+		  ShowName		  off
+		  Expr			  "u[1]*3*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs2"
+		  Position		  [125, 220, 185, 250]
+		  ShowName		  off
+		  Expr			  "u[1]*3*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 290, 185, 320]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [355, 185, 385, 215]
+		  InitialCondition	  "C3o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [4, 1]
+		  Position		  [95, 30, 100, 135]
+		  ShowName		  off
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [95, 146, 100, 184]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux2"
+		  Ports			  [2, 1]
+		  Position		  [95, 216, 100, 254]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 286, 100, 324]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [4, 1]
+		  Position		  [285, 55, 310, 345]
+		  ShowName		  off
+		  Inputs		  "-+++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C3"
+		  Position		  [425, 193, 455, 207]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 10]
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C7"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "C4"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux2"
+		  SrcPort		  1
+		  DstBlock		  "GKs2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From4"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "GKs2"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 5]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "C2"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "From"
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [0, 0; 10, 0]
+		  Branch {
+		    Points		    [0, -190; -325, 0; 0, 35]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "C3"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C4"
+	      Ports		      [3, 1]
+	      Position		      [470, 58, 510, 122]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C4"
+		Location		[49, 113, 510, 470]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C3"
+		  Position		  [20, 148, 50, 162]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C5"
+		  Position		  [20, 218, 50, 232]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C8"
+		  Position		  [20, 288, 50, 302]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From"
+		  Position		  [20, 46, 60, 74]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [20, 181, 60, 209]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 76, 60, 104]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 106, 60, 134]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From4"
+		  Position		  [20, 251, 60, 279]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 321, 60, 349]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 70, 230, 100]
+		  ShowName		  off
+		  Expr			  "u[1]*(u[2]+3*u[3]+3*u[4])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [125, 150, 185, 180]
+		  ShowName		  off
+		  Expr			  "u[1]*2*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs2"
+		  Position		  [125, 220, 185, 250]
+		  ShowName		  off
+		  Expr			  "u[1]*4*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 290, 185, 320]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [330, 185, 360, 215]
+		  InitialCondition	  "C4o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [4, 1]
+		  Position		  [95, 30, 100, 135]
+		  ShowName		  off
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [95, 146, 100, 184]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux2"
+		  Ports			  [2, 1]
+		  Position		  [95, 216, 100, 254]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 286, 100, 324]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [4, 1]
+		  Position		  [260, 55, 285, 345]
+		  ShowName		  off
+		  Inputs		  "-+++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C4"
+		  Position		  [400, 193, 430, 207]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 10]
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C8"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "C5"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux2"
+		  SrcPort		  1
+		  DstBlock		  "GKs2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From4"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "GKs2"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 5]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "C3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "From"
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [0, 0; 10, 0]
+		  Branch {
+		    Points		    [0, -190; -300, 0; 0, 35]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "C4"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C5"
+	      Ports		      [2, 1]
+	      Position		      [585, 58, 625, 122]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C5"
+		Location		[66, 96, 525, 405]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C4"
+		  Position		  [20, 143, 50, 157]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C9"
+		  Position		  [20, 218, 50, 232]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [20, 176, 60, 204]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 71, 60, 99]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 101, 60, 129]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 251, 60, 279]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 70, 230, 100]
+		  ShowName		  off
+		  Expr			  "u[1]*(4*u[2]+4*u[3])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [125, 145, 185, 175]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 220, 185, 250]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [330, 145, 360, 175]
+		  InitialCondition	  "C5o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [3, 1]
+		  Position		  [95, 37, 100, 133]
+		  ShowName		  off
+		  Inputs		  "3"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [95, 141, 100, 179]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 216, 100, 254]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [3, 1]
+		  Position		  [260, 49, 285, 271]
+		  ShowName		  off
+		  Inputs		  "-++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C5"
+		  Position		  [400, 153, 430, 167]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C9"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "C4"
+		  SrcPort		  1
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  Branch {
+		    Points		    [0, -150; -300, 0; 0, 45]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "C5"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C6"
+	      Ports		      [2, 1]
+	      Position		      [240, 208, 280, 272]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C6"
+		Location		[66, 96, 525, 405]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C2"
+		  Position		  [20, 143, 50, 157]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C7"
+		  Position		  [20, 218, 50, 232]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [20, 176, 60, 204]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 71, 60, 99]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 101, 60, 129]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 251, 60, 279]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 70, 230, 100]
+		  ShowName		  off
+		  Expr			  "u[1]*(3*u[2]+u[3])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [125, 145, 185, 175]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 220, 185, 250]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [330, 145, 360, 175]
+		  InitialCondition	  "C6o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [3, 1]
+		  Position		  [95, 37, 100, 133]
+		  ShowName		  off
+		  Inputs		  "3"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [95, 141, 100, 179]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 216, 100, 254]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [3, 1]
+		  Position		  [260, 49, 285, 271]
+		  ShowName		  off
+		  Inputs		  "-++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C6"
+		  Position		  [400, 153, 430, 167]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, 0]
+		  Branch {
+		    DstBlock		    "C6"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -150; -300, 0; 0, 45]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C2"
+		  SrcPort		  1
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C7"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C7"
+	      Ports		      [4, 1]
+	      Position		      [360, 210, 400, 275]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C7"
+		Location		[36, 75, 498, 582]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C3"
+		  Position		  [20, 183, 50, 197]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C6"
+		  Position		  [20, 253, 50, 267]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C8"
+		  Position		  [20, 323, 50, 337]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C10"
+		  Position		  [20, 393, 50, 407]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From"
+		  Position		  [20, 51, 60, 79]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [20, 216, 60, 244]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 81, 60, 109]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 111, 60, 139]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From4"
+		  Position		  [20, 286, 60, 314]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 356, 60, 384]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From6"
+		  Position		  [20, 141, 60, 169]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From7"
+		  Position		  [20, 426, 60, 454]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 84, 260, 116]
+		  ShowName		  off
+		  Expr			  "u[1]*(2*u[2]+u[3]+u[4]+u[5])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [125, 185, 185, 215]
+		  ShowName		  off
+		  Expr			  "u[1]*2*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs2"
+		  Position		  [125, 255, 185, 285]
+		  ShowName		  off
+		  Expr			  "u[1]*3*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 325, 185, 355]
+		  ShowName		  off
+		  Expr			  "u[1]*2*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs4"
+		  Position		  [125, 395, 185, 425]
+		  ShowName		  off
+		  Expr			  "u[1]*2*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [340, 255, 370, 285]
+		  InitialCondition	  "C7o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [5, 1]
+		  Position		  [95, 19, 100, 171]
+		  ShowName		  off
+		  Inputs		  "5"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [95, 181, 100, 219]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux2"
+		  Ports			  [2, 1]
+		  Position		  [95, 251, 100, 289]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 321, 100, 359]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux4"
+		  Ports			  [2, 1]
+		  Position		  [95, 391, 100, 429]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [5, 1]
+		  Position		  [290, 59, 315, 481]
+		  ShowName		  off
+		  Inputs		  "-++++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C7"
+		  Position		  [420, 263, 450, 277]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, 15]
+		  DstBlock		  "Sum3"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C8"
+		  SrcPort		  1
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "C6"
+		  SrcPort		  1
+		  DstBlock		  "Mux2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux2"
+		  SrcPort		  1
+		  DstBlock		  "GKs2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From4"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "GKs2"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "C3"
+		  SrcPort		  1
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "From"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  Points		  [5, 0]
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, -15]
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  Branch {
+		    Points		    [0, -260; -310, 0]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "C7"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From6"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "GKs4"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, 30]
+		  DstBlock		  "Sum3"
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "C10"
+		  SrcPort		  1
+		  DstBlock		  "Mux4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux4"
+		  SrcPort		  1
+		  DstBlock		  "GKs4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From7"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux4"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C8"
+	      Ports		      [4, 1]
+	      Position		      [470, 210, 510, 275]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C8"
+		Location		[36, 82, 498, 589]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C4"
+		  Position		  [20, 183, 50, 197]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C7"
+		  Position		  [20, 253, 50, 267]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C9"
+		  Position		  [20, 323, 50, 337]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C11"
+		  Position		  [20, 393, 50, 407]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From"
+		  Position		  [20, 51, 60, 79]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [20, 216, 60, 244]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 81, 60, 109]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 111, 60, 139]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From4"
+		  Position		  [20, 286, 60, 314]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 356, 60, 384]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From6"
+		  Position		  [20, 141, 60, 169]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From7"
+		  Position		  [20, 426, 60, 454]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 84, 260, 116]
+		  ShowName		  off
+		  Expr			  "u[1]*(u[2]+2*u[3]+2*u[4]+u[5])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [125, 185, 185, 215]
+		  ShowName		  off
+		  Expr			  "u[1]*3*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs2"
+		  Position		  [125, 255, 185, 285]
+		  ShowName		  off
+		  Expr			  "u[1]*2*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 325, 185, 355]
+		  ShowName		  off
+		  Expr			  "u[1]*3*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs4"
+		  Position		  [125, 395, 185, 425]
+		  ShowName		  off
+		  Expr			  "u[1]*2*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [340, 255, 370, 285]
+		  InitialCondition	  "C8o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [5, 1]
+		  Position		  [95, 19, 100, 171]
+		  ShowName		  off
+		  Inputs		  "5"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [95, 181, 100, 219]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux2"
+		  Ports			  [2, 1]
+		  Position		  [95, 251, 100, 289]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 321, 100, 359]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux4"
+		  Ports			  [2, 1]
+		  Position		  [95, 391, 100, 429]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [5, 1]
+		  Position		  [290, 59, 315, 481]
+		  ShowName		  off
+		  Inputs		  "-++++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C8"
+		  Position		  [420, 263, 450, 277]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "From7"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux4"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux4"
+		  SrcPort		  1
+		  DstBlock		  "GKs4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C11"
+		  SrcPort		  1
+		  DstBlock		  "Mux4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs4"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, 30]
+		  DstBlock		  "Sum3"
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "From6"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  Branch {
+		    DstBlock		    "C8"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -260; -310, 0]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, -15]
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  Points		  [5, 0]
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C4"
+		  SrcPort		  1
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "GKs2"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From4"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux2"
+		  SrcPort		  1
+		  DstBlock		  "GKs2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C7"
+		  SrcPort		  1
+		  DstBlock		  "Mux2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C9"
+		  SrcPort		  1
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, 15]
+		  DstBlock		  "Sum3"
+		  DstPort		  4
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "C9"
+	      Ports		      [3, 1]
+	      Position		      [585, 208, 625, 272]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"C9"
+		Location		[49, 113, 510, 470]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "C5"
+		  Position		  [20, 148, 50, 162]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C8"
+		  Position		  [20, 218, 50, 232]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C12"
+		  Position		  [20, 288, 50, 302]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From"
+		  Position		  [20, 46, 60, 74]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "beta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From1"
+		  Position		  [20, 181, 60, 209]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 76, 60, 104]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "gamma"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 106, 60, 134]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From4"
+		  Position		  [20, 251, 60, 279]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "alfa"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 321, 60, 349]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "delta"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 70, 230, 100]
+		  ShowName		  off
+		  Expr			  "u[1]*(3*u[2]+3*u[3]+u[4])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs1"
+		  Position		  [125, 150, 185, 180]
+		  ShowName		  off
+		  Expr			  "u[1]*4*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs2"
+		  Position		  [125, 220, 185, 250]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 290, 185, 320]
+		  ShowName		  off
+		  Expr			  "u[1]*2*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [330, 185, 360, 215]
+		  InitialCondition	  "C9o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [4, 1]
+		  Position		  [95, 30, 100, 135]
+		  ShowName		  off
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  Ports			  [2, 1]
+		  Position		  [95, 146, 100, 184]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux2"
+		  Ports			  [2, 1]
+		  Position		  [95, 216, 100, 254]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 286, 100, 324]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [4, 1]
+		  Position		  [260, 55, 285, 345]
+		  ShowName		  off
+		  Inputs		  "-+++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "C9"
+		  Position		  [400, 193, 430, 207]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [0, 0; 10, 0]
+		  Branch {
+		    DstBlock		    "C9"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -190; -300, 0; 0, 35]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "GKs1"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From"
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "From1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "GKs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C5"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 5]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "GKs2"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From4"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux2"
+		  SrcPort		  1
+		  DstBlock		  "GKs2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C8"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C12"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 10]
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  4
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      Position		      [28, 240, 72, 285]
+	      Orientation	      "down"
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      Gain		      "F/R/T"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto"
+	      Position		      [165, 285, 205, 315]
+	      ShowName		      off
+	      GotoTag		      "alfa"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto1"
+	      Position		      [165, 335, 205, 365]
+	      ShowName		      off
+	      GotoTag		      "beta"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto2"
+	      Position		      [165, 385, 205, 415]
+	      ShowName		      off
+	      GotoTag		      "gamma"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto3"
+	      Position		      [165, 435, 205, 465]
+	      ShowName		      off
+	      GotoTag		      "delta"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto4"
+	      Position		      [165, 485, 205, 515]
+	      ShowName		      off
+	      GotoTag		      "eta"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto5"
+	      Position		      [165, 535, 205, 565]
+	      ShowName		      off
+	      GotoTag		      "psi"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto6"
+	      Position		      [165, 585, 205, 615]
+	      ShowName		      off
+	      GotoTag		      "omega"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "O1"
+	      Ports		      [2, 1]
+	      Position		      [470, 603, 510, 667]
+	      Orientation	      "left"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"O1"
+		Location		[64, 82, 527, 443]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "O2"
+		  Position		  [20, 218, 50, 232]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "C15"
+		  Position		  [20, 153, 50, 167]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 71, 60, 99]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "eta"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From3"
+		  Position		  [20, 101, 60, 129]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "psi"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 251, 60, 279]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "omega"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 70, 230, 100]
+		  ShowName		  off
+		  Expr			  "u[1]*(u[2]+u[3])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 220, 185, 250]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [125, 145, 195, 175]
+		  Gain			  "parexp(15)"
+		  ParameterDataTypeMode	  "Inherit via internal rule"
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [330, 145, 360, 175]
+		  InitialCondition	  "O1o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [3, 1]
+		  Position		  [95, 37, 100, 133]
+		  ShowName		  off
+		  Inputs		  "3"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 216, 100, 254]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [3, 1]
+		  Position		  [260, 49, 285, 271]
+		  ShowName		  off
+		  Inputs		  "-++"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O1"
+		  Position		  [400, 153, 430, 167]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, 0]
+		  Branch {
+		    DstBlock		    "O1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -150; -300, 0; 0, 45]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "O2"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "C15"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "O2"
+	      Ports		      [1, 1]
+	      Position		      [365, 603, 405, 667]
+	      Orientation	      "left"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"O2"
+		Location		[66, 96, 525, 405]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "O1"
+		  Position		  [20, 113, 50, 127]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From2"
+		  Position		  [20, 71, 60, 99]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "omega"
+		}
+		Block {
+		  BlockType		  From
+		  Name			  "From5"
+		  Position		  [20, 146, 60, 174]
+		  ShowName		  off
+		  CloseFcn		  "tagdialog Close"
+		  GotoTag		  "psi"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs"
+		  Position		  [125, 55, 230, 85]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "GKs3"
+		  Position		  [125, 115, 185, 145]
+		  ShowName		  off
+		  Expr			  "u[1]*u[2]"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  Ports			  [1, 1]
+		  Position		  [330, 85, 360, 115]
+		  InitialCondition	  "O2o"
+		  IgnoreLimit		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [2, 1]
+		  Position		  [95, 39, 100, 101]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [95, 111, 100, 149]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [2, 1]
+		  Position		  [260, 41, 285, 159]
+		  ShowName		  off
+		  Inputs		  "-+"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O2"
+		  Position		  [400, 93, 430, 107]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "GKs3"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "GKs"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "O1"
+		  SrcPort		  1
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "GKs3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From5"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "GKs"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  Branch {
+		    Points		    [0, -90; -300, 0; 0, 45]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "O2"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "From2"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace"
+	      Position		      [720, 15, 780, 45]
+	      ShowName		      off
+	      VariableName	      "C1"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace1"
+	      Position		      [720, 50, 780, 80]
+	      ShowName		      off
+	      VariableName	      "C2"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace10"
+	      Position		      [720, 365, 780, 395]
+	      ShowName		      off
+	      VariableName	      "C11"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace11"
+	      Position		      [720, 400, 780, 430]
+	      ShowName		      off
+	      VariableName	      "C12"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace12"
+	      Position		      [720, 465, 780, 495]
+	      ShowName		      off
+	      VariableName	      "C13"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace13"
+	      Position		      [720, 510, 780, 540]
+	      ShowName		      off
+	      VariableName	      "C14"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace14"
+	      Position		      [720, 545, 780, 575]
+	      ShowName		      off
+	      VariableName	      "C15"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace15"
+	      Position		      [720, 580, 780, 610]
+	      ShowName		      off
+	      VariableName	      "O2"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace16"
+	      Position		      [720, 615, 780, 645]
+	      ShowName		      off
+	      VariableName	      "O1"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace17"
+	      Position		      [220, 305, 280, 335]
+	      ShowName		      off
+	      VariableName	      "alfa"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace18"
+	      Position		      [220, 355, 280, 385]
+	      ShowName		      off
+	      VariableName	      "beta"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace19"
+	      Position		      [220, 405, 280, 435]
+	      ShowName		      off
+	      VariableName	      "gamma"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace2"
+	      Position		      [720, 85, 780, 115]
+	      ShowName		      off
+	      VariableName	      "C3"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace20"
+	      Position		      [220, 455, 280, 485]
+	      ShowName		      off
+	      VariableName	      "delta"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace21"
+	      Position		      [220, 505, 280, 535]
+	      ShowName		      off
+	      VariableName	      "eta"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace22"
+	      Position		      [220, 555, 280, 585]
+	      ShowName		      off
+	      VariableName	      "psi"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace23"
+	      Position		      [220, 605, 280, 635]
+	      ShowName		      off
+	      VariableName	      "omega"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace3"
+	      Position		      [720, 120, 780, 150]
+	      ShowName		      off
+	      VariableName	      "C4"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace4"
+	      Position		      [720, 155, 780, 185]
+	      ShowName		      off
+	      VariableName	      "C5"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace5"
+	      Position		      [720, 190, 780, 220]
+	      ShowName		      off
+	      VariableName	      "C6"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace6"
+	      Position		      [720, 225, 780, 255]
+	      ShowName		      off
+	      VariableName	      "C7"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace7"
+	      Position		      [720, 260, 780, 290]
+	      ShowName		      off
+	      VariableName	      "C8"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace8"
+	      Position		      [720, 295, 780, 325]
+	      ShowName		      off
+	      VariableName	      "C9"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace9"
+	      Position		      [720, 330, 780, 360]
+	      ShowName		      off
+	      VariableName	      "C10"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "a"
+	      Position		      [75, 285, 135, 315]
+	      ShowName		      off
+	      Expr		      "parexp(1)/(1+exp((parexp(8)*F/R/T-u)/pa"
+"rexp(16)))"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "b"
+	      Position		      [75, 335, 135, 365]
+	      ShowName		      off
+	      Expr		      "parexp(2)/(1+exp((-parexp(9)*F/R/T+u)/p"
+"arexp(20)))"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "d"
+	      Position		      [75, 435, 135, 465]
+	      ShowName		      off
+	      Expr		      "parexp(4)*exp(parexp(11)*u)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "e"
+	      Position		      [75, 485, 135, 515]
+	      ShowName		      off
+	      Expr		      "(parexp(5)-parexp(19))/(1+exp((-parexp("
+"12)*F/R/T+u)/parexp(18)))+parexp(19)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "g"
+	      Position		      [75, 385, 135, 415]
+	      ShowName		      off
+	      Expr		      "parexp(3)/(1+exp((parexp(10)*F/R/T-u)/p"
+"arexp(17)))"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "o"
+	      Position		      [75, 585, 135, 615]
+	      ShowName		      off
+	      Expr		      "parexp(7)*exp(parexp(14)*u)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "p"
+	      Position		      [75, 535, 135, 565]
+	      ShowName		      off
+	      Expr		      "parexp(6)*exp(parexp(13)*u)"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "O"
+	      Position		      [170, 658, 200, 672]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "C1"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -20]
+	      Branch {
+		DstBlock		"C2"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -60; 500, 0; 0, 20]
+		DstBlock		"To Workspace"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "C2"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		Points			[0, -20]
+		Branch {
+		  DstBlock		  "C3"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, -30]
+		  Branch {
+		    Points		    [-195, 0]
+		    DstBlock		    "C1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -5; 385, 0; 0, 30]
+		    DstBlock		    "To Workspace1"
+		    DstPort		    1
+		  }
+		}
+	      }
+	      Branch {
+		Points			[0, 50; -75, 0]
+		DstBlock		"C6"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "C3"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, -5]
+	      Branch {
+		Points			[0, -15]
+		Branch {
+		  DstBlock		  "C4"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, -20]
+		  Branch {
+		    Points		    [0, -25; -190, 0]
+		    DstBlock		    "C2"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [250, 0; 0, 50]
+		    DstBlock		    "To Workspace2"
+		    DstPort		    1
+		  }
+		}
+	      }
+	      Branch {
+		Points			[0, 55; -80, 0; 0, 80]
+		DstBlock		"C7"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "C4"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		Points			[0, -15]
+		Branch {
+		  Points		  [0, -35; -190, 0; 0, 50]
+		  DstBlock		  "C3"
+		  DstPort		  2
+		}
+		Branch {
+		  DstBlock		  "C5"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		Points			[0, 45]
+		Branch {
+		  Points		  [0, 5; -80, 0; 0, 80]
+		  DstBlock		  "C8"
+		  DstPort		  1
+		}
+		Branch {
+		  DstBlock		  "To Workspace3"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "C5"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		Points			[0, -65; -200, 0; 0, 65]
+		DstBlock		"C4"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 50]
+		Branch {
+		  Points		  [-85, 0; 0, 80]
+		  DstBlock		  "C9"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 30]
+		  DstBlock		  "To Workspace4"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "C6"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, -5]
+	      Branch {
+		DstBlock		"C7"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, -30]
+		Branch {
+		  Points		  [0, -50; -95, 0; 0, -45]
+		  DstBlock		  "C2"
+		  DstPort		  3
+		}
+		Branch {
+		  DstBlock		  "To Workspace5"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "C7"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		Points			[5, 0; 0, -10]
+		Branch {
+		  DstBlock		  "C8"
+		  DstPort		  2
+		}
+		Branch {
+		  Points		  [0, -50]
+		  Branch {
+		    Points		    [0, -10; -100, 0]
+		    Branch {
+		    Points		    [0, -65]
+		    DstBlock		    "C3"
+		    DstPort		    3
+		    }
+		    Branch {
+		    Points		    [-110, 0; 0, 80]
+		    DstBlock		    "C6"
+		    DstPort		    2
+		    }
+		  }
+		  Branch {
+		    Points		    [260, 0; 0, 55]
+		    DstBlock		    "To Workspace6"
+		    DstPort		    1
+		  }
+		}
+	      }
+	      Branch {
+		Points			[5, 0; 0, 45; -80, 0; 0, 85]
+		DstBlock		"C10"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "C8"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		Points			[5, 0; 0, -5]
+		Branch {
+		  Points		  [0, -45]
+		  Branch {
+		    Points		    [0, -45; -95, 0; 0, -40]
+		    DstBlock		    "C4"
+		    DstPort		    3
+		  }
+		  Branch {
+		    Points		    [-210, 0; 0, 55]
+		    DstBlock		    "C7"
+		    DstPort		    3
+		  }
+		}
+		Branch {
+		  DstBlock		  "C9"
+		  DstPort		  2
+		}
+	      }
+	      Branch {
+		Points			[5, 0; 0, 30]
+		Branch {
+		  Points		  [0, 15; -80, 0; 0, 75]
+		  DstBlock		  "C11"
+		  DstPort		  1
+		}
+		Branch {
+		  DstBlock		  "To Workspace7"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "C9"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		Points			[0, -65; -105, 0]
+		Branch {
+		  Points		  [0, -70]
+		  DstBlock		  "C5"
+		  DstPort		  2
+		}
+		Branch {
+		  Points		  [-110, 0; 0, 75]
+		  DstBlock		  "C8"
+		  DstPort		  3
+		}
+	      }
+	      Branch {
+		Points			[0, 50]
+		Branch {
+		  Points		  [-85, 0; 0, 75]
+		  DstBlock		  "C12"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [30, 0; 0, 20]
+		  DstBlock		  "To Workspace8"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "C10"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, -10]
+	      Branch {
+		DstBlock		"C11"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, -35]
+		Branch {
+		  Points		  [0, -25; -100, 0; 0, -55]
+		  DstBlock		  "C7"
+		  DstPort		  4
+		}
+		Branch {
+		  DstBlock		  "To Workspace9"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "C11"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		Points			[5, 0; 0, -5]
+		Branch {
+		  Points		  [0, -45]
+		  Branch {
+		    Points		    [0, -40; -95, 0; 0, -35]
+		    DstBlock		    "C8"
+		    DstPort		    4
+		  }
+		  Branch {
+		    Points		    [-205, 0; 0, 65]
+		    DstBlock		    "C10"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [150, 0; 0, 40]
+		    DstBlock		    "To Workspace10"
+		    DstPort		    1
+		  }
+		}
+		Branch {
+		  DstBlock		  "C12"
+		  DstPort		  2
+		}
+	      }
+	      Branch {
+		Points			[5, 0; 0, 45; -80, 0; 0, 75]
+		DstBlock		"C13"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "C12"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		Points			[0, -65; -5, 0]
+		Branch {
+		  Points		  [5, 0; 0, -20; -100, 0; 0, -40]
+		  DstBlock		  "C9"
+		  DstPort		  3
+		}
+		Branch {
+		  Points		  [-210, 0; 0, 75]
+		  DstBlock		  "C11"
+		  DstPort		  3
+		}
+	      }
+	      Branch {
+		Points			[0, 30]
+		Branch {
+		  Points		  [0, 20; -85, 0; 0, 70]
+		  DstBlock		  "C14"
+		  DstPort		  1
+		}
+		Branch {
+		  DstBlock		  "To Workspace11"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "C13"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		DstBlock		"C14"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, -45]
+		Branch {
+		  Points		  [0, -35; -95, 0; 0, -35]
+		  DstBlock		  "C11"
+		  DstPort		  4
+		}
+		Branch {
+		  Labels		  [1, 0]
+		  DstBlock		  "To Workspace12"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "C14"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		Points			[0, -65; -5, 0]
+		Branch {
+		  Points		  [5, 0; 0, -15; -100, 0; 0, -40]
+		  DstBlock		  "C12"
+		  DstPort		  3
+		}
+		Branch {
+		  Points		  [-210, 0; 0, 80]
+		  DstBlock		  "C13"
+		  DstPort		  2
+		}
+	      }
+	      Branch {
+		Labels			[2, 0]
+		Points			[0, 50; -85, 0; 0, 45]
+		DstBlock		"C15"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"To Workspace13"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "C15"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, -45; -100, 0]
+	      Branch {
+		Points			[0, 60]
+		DstBlock		"O1"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, -30]
+		Branch {
+		  Points		  [0, -15]
+		  DstBlock		  "C14"
+		  DstPort		  3
+		}
+		Branch {
+		  DstBlock		  "To Workspace14"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "O2"
+	      SrcPort		      1
+	      Points		      [-25, 0]
+	      Branch {
+		Points			[0, -45; 190, 0; 0, 5]
+		Branch {
+		  DstBlock		  "O1"
+		  DstPort		  1
+		}
+		Branch {
+		  DstBlock		  "To Workspace15"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		Points			[0, 20]
+		DstBlock		"Add1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "O1"
+	      SrcPort		      1
+	      Points		      [-20, 0]
+	      Branch {
+		Points			[0, 50]
+		Branch {
+		  Points		  [115, 0]
+		  Branch {
+		    Points		    [0, -35]
+		    DstBlock		    "C15"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [120, 0; 0, -55]
+		    DstBlock		    "To Workspace16"
+		    DstPort		    1
+		  }
+		}
+		Branch {
+		  Points		  [-110, 0; 0, -15]
+		  DstBlock		  "Add1"
+		  DstPort		  2
+		}
+	      }
+	      Branch {
+		DstBlock		"O2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Add1"
+	      SrcPort		      1
+	      DstBlock		      "O"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      Points		      [0, 0; 0, 10]
+	      Branch {
+		DstBlock		"a"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 50]
+		Branch {
+		  DstBlock		  "b"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 50]
+		  Branch {
+		    DstBlock		    "g"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 50]
+		    Branch {
+		    DstBlock		    "d"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 50]
+		    Branch {
+		    DstBlock		    "e"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 50]
+		    Branch {
+		    DstBlock		    "p"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 50]
+		    DstBlock		    "o"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		  }
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "a"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		DstBlock		"Goto"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 20]
+		DstBlock		"To Workspace17"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "b"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		DstBlock		"Goto1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 20]
+		DstBlock		"To Workspace18"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "g"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		DstBlock		"Goto2"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 20]
+		DstBlock		"To Workspace19"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "d"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		DstBlock		"Goto3"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 20]
+		DstBlock		"To Workspace20"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "e"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		DstBlock		"Goto4"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 20]
+		DstBlock		"To Workspace21"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "p"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		DstBlock		"Goto5"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 20]
+		DstBlock		"To Workspace22"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "o"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		DstBlock		"Goto6"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 20]
+		DstBlock		"To Workspace23"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Vm"
+	      SrcPort		      1
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [4, 1]
+	  Position		  [335, 181, 340, 219]
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  Ports			  [2, 1]
+	  Position		  [115, 293, 120, 362]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [455, 193, 485, 207]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Cai"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "GKs"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Markov model"
+	  SrcPort		  1
+	  Points		  [60, 0; 0, 30]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Vm"
+	  SrcPort		  1
+	  Points		  [0, 0; 40, 0]
+	  Branch {
+	    Labels		    [0, 0]
+	    Points		    [0, -90]
+	    DstBlock		    "Markov model"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [110, 0; 0, -50]
+	    DstBlock		    "Mux"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "IKs"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  DstBlock		  "EKs"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Ki"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "Mux2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Nai"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "Mux2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "IKs"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Manual Switch"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, -90]
+	  DstBlock		  "Mux"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 10]
+	  DstBlock		  "Manual Switch"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EKs"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -15]
+	  DstBlock		  "Manual Switch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 10]
+	  DstBlock		  "Manual Switch2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "GKs"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -10]
+	  DstBlock		  "Manual Switch2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Manual Switch2"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 135]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "IV relation"
+      Ports		      [0, 1]
+      Position		      [55, 175, 95, 235]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"IV relation"
+	Location		[472, 144, 722, 276]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1]
+	  Position		  [105, 25, 125, 45]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace"
+	  Position		  [150, 71, 200, 89]
+	  VariableName		  "vm3"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "activation"
+	  Position		  [30, 20, 60, 50]
+	  Time			  "3000e-3"
+	  Before		  "-0.04"
+	  After			  "x"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "activation1"
+	  Position		  [30, 75, 60, 105]
+	  Time			  "6000e-3"
+	  After			  "x+30e-3"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [155, 28, 185, 42]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "activation"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "activation1"
+	  SrcPort		  1
+	  Points		  [50, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Out1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "To Workspace"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Intermediate Inactivation"
+      Ports		      [0, 1]
+      Position		      [55, 340, 95, 400]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"Intermediate Inactivation"
+	Location		[559, 82, 830, 367]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Step
+	  Name			  "Step"
+	  Position		  [25, 25, 55, 55]
+	  Time			  "50e-3"
+	  Before		  "-0.14"
+	  After			  "-0.02"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "Step1"
+	  Position		  [25, 70, 55, 100]
+	  Time			  "50e-3+x"
+	  After			  "0.12"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "Step2"
+	  Position		  [25, 120, 55, 150]
+	  Time			  "50e-3+x+20e-3"
+	  After			  "0.12"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "Step3"
+	  Position		  [25, 170, 55, 200]
+	  Time			  "50e-3+x+40e-3"
+	  After			  "0.12"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [4, 1]
+	  Position		  [130, 89, 150, 161]
+	  ShowName		  off
+	  Inputs		  "|+-+-"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace"
+	  Position		  [190, 161, 240, 179]
+	  VariableName		  "vm5"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [175, 103, 205, 117]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Out1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 45]
+	    DstBlock		    "To Workspace"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Step3"
+	  SrcPort		  1
+	  Points		  [55, 0; 0, -50]
+	  DstBlock		  "Sum1"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Step2"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  3
+	}
+	Line {
+	  Labels		  [2, 0]
+	  SrcBlock		  "Step1"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Step"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux5"
+      Ports		      [7, 1]
+      Position		      [185, 169, 200, 281]
+      ShowName		      off
+      Inputs		      "7"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Recovery from Inactivation"
+      Ports		      [0, 1]
+      Position		      [55, 90, 95, 150]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"Recovery from Inactivation"
+	Location		[642, 178, 931, 424]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Step
+	  Name			  "Step"
+	  Position		  [25, 25, 55, 55]
+	  Time			  "50e-3"
+	  Before		  "-0.04"
+	  After			  "0.02"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "Step1"
+	  Position		  [25, 70, 55, 100]
+	  Time			  "3050e-3"
+	  After			  "0.1"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "Step2"
+	  Position		  [25, 120, 55, 150]
+	  Time			  "3050e-3+x"
+	  After			  "0.1"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "Step3"
+	  Position		  [25, 170, 55, 200]
+	  Time			  "3050e-3+x+3000e-3"
+	  After			  "0.1"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [4, 1]
+	  Position		  [130, 89, 150, 161]
+	  ShowName		  off
+	  Inputs		  "|+-+-"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace1"
+	  Position		  [195, 183, 245, 207]
+	  VariableName		  "vm2"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [175, 103, 205, 117]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Step"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [2, 0]
+	  SrcBlock		  "Step1"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Step2"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Step3"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Out1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 75]
+	    DstBlock		    "To Workspace1"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "SS Inactivation"
+      Ports		      [0, 1]
+      Position		      [55, 15, 95, 75]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"SS Inactivation"
+	Location		[688, 101, 930, 321]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  Ports			  [3, 1]
+	  Position		  [105, 42, 120, 78]
+	  ShowName		  off
+	  Inputs		  "|++-"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "inactivation"
+	  Position		  [20, 20, 50, 50]
+	  Time			  "50e-3"
+	  Before		  "-0.14"
+	  After			  "x"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "inactivation1"
+	  Position		  [20, 75, 50, 105]
+	  Time			  "550e-3"
+	  After			  "-0.02-x"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "inactivation2"
+	  Position		  [25, 125, 55, 155]
+	  Time			  "570e-3"
+	  After			  "+0.12"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [155, 53, 185, 67]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "inactivation"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "inactivation1"
+	  SrcPort		  1
+	  Points		  [0, -25]
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "inactivation2"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      Position		      [500, 150, 560, 180]
+      VariableName	      "IKs"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace1"
+      Position		      [295, 250, 355, 280]
+      VariableName	      "Vm"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "late"
+      Ports		      [0, 1]
+      Position		      [55, 260, 95, 320]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"late"
+	Location		[148, 239, 398, 547]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [4, 1]
+	  Position		  [105, 25, 135, 55]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-+-"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace"
+	  Position		  [150, 71, 200, 89]
+	  VariableName		  "vm4"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "activation"
+	  Position		  [30, 20, 60, 50]
+	  Time			  "50e-3"
+	  Before		  "-0.14"
+	  After			  "-0.02"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "activation1"
+	  Position		  [30, 75, 60, 105]
+	  Time			  "1050e-3"
+	  After			  "0.12"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "activation2"
+	  Position		  [45, 160, 75, 190]
+	  Time			  "2050e-3"
+	  After			  "0.120"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "activation3"
+	  Position		  [130, 200, 160, 230]
+	  Time			  "3050e-3"
+	  After			  "0.12"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [155, 28, 185, 42]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "activation"
+	  SrcPort		  1
+	  Points		  [34, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "activation1"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [0, -5; -5, 0]
+	  Branch {
+	    DstBlock		    "Out1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "To Workspace"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "activation2"
+	  SrcPort		  1
+	  Points		  [19, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "activation3"
+	  SrcPort		  1
+	  Points		  [0, -110; -45, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  4
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "IKs"
+      SrcPort		      1
+      Points		      [0, 0]
+      DstBlock		      "To Workspace"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant2"
+      SrcPort		      1
+      DstBlock		      "IKs"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      Points		      [0, 0]
+      DstBlock		      "IKs"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Constant3"
+      SrcPort		      1
+      Points		      [0, 0]
+      DstBlock		      "IKs"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Mux5"
+      SrcPort		      1
+      DstBlock		      "B2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "late"
+      SrcPort		      1
+      Points		      [45, 0; 0, -65]
+      DstBlock		      "Mux5"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Intermediate Inactivation"
+      SrcPort		      1
+      Points		      [50, 0; 0, -130]
+      DstBlock		      "Mux5"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "SS Inactivation"
+      SrcPort		      1
+      Points		      [70, 0]
+      DstBlock		      "Mux5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Recovery from Inactivation"
+      SrcPort		      1
+      Points		      [60, 0; 0, 75]
+      DstBlock		      "Mux5"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "IV relation"
+      SrcPort		      1
+      Points		      [70, 0]
+      DstBlock		      "Mux5"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "B2"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	Points			[0, -60]
+	DstBlock		"IKs"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 60]
+	DstBlock		"To Workspace1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Constant4"
+      SrcPort		      1
+      Points		      [65, 0; 0, -165]
+      DstBlock		      "Mux5"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "Deactivation"
+      SrcPort		      1
+      Points		      [70, 0]
+      DstBlock		      "Mux5"
+      DstPort		      7
+    }
+  }
+}
